@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Text reversal task </title>
+    <title> Text reversal task Ulesanne7 </title>
     <link type='text/css' rel='stylesheet' href='style.css'/>
 </head>
 <body>
