@@ -16,6 +16,7 @@ $kassid = array(
     array('nimi'=>'amelie', 'vanus'=>3, 'varv'=> 'punane', 'toit' => 'pedigree'),
     array('nimi'=>'tomas', 'vanus'=>4, 'varv'=> 'hall', 'toit' => 'nurr')
 
+    
 );
 
 foreach($kassid as $kass) {
