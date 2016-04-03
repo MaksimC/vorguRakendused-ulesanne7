@@ -31,35 +31,11 @@
 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
-    $esimeneOsaAsukoht = $text[0];
-    $teiseOsaAsukoht = strpos($text, "At vero");
-    $kolmasOsaAsukoht = strpos($text, "Duis");
-
-    $osaUks = substr($text, 0, $teiseOsaAsukoht-1);
-    $osaKaks = substr($text, $teiseOsaAsukoht, $kolmasOsaAsukoht-$teiseOsaAsukoht);
-    $osaKolm = substr($text, $kolmasOsaAsukoht, strlen($text)-($kolmasOsaAsukoht-1));
-
-    $array1 = str_split($osaUks);
-    $array2 = str_split($osaKaks);
-    $array3 = str_split($osaKolm);
-
-    echo "<span>".$array1[0]."</span>";
-    for ($i = 1; $i<count($array1); $i++){
-        echo $array1[$i];
+    $array = explode("\n",$text);
+    foreach ($array as $part){
+        echo "<span>$part[0]</span>";;
+        echo substr($part, 1)."<br><br>";
     }
-    echo "<br>";
-
-    echo "<span>".$array2[0]."</span>";
-    for ($i = 1; $i<count($array2); $i++){
-        echo $array2[$i];
-    }
-    echo "<br>";
-
-    echo "<span>".$array3[0]."</span>";
-    for ($i = 1; $i<count($array3); $i++){
-        echo $array3[$i];
-    }
-    echo "<br>";
 
     /*
         SIIN ESITADA TEKST NII; ET IGA PRAGRAHVI ALGUSTÄHT ON SUUR (span vahel)
